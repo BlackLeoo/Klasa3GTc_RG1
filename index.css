@@ -1,0 +1,46 @@
+:root {
+  --tlo-strony: #c3c3c3;
+  --font-color: #000;
+  --font-family: "Roboto", sans-serif;
+  --font-color-neg: #d4d4d4;
+  --blok-color: #000;
+  --btn-font-color: #000;
+  --btn-font-color-neg: #d4d4d4;
+  --btn-linia: #000;
+  --btn-linia-neg: #d4d4d4;
+  --btn-tlo: #c3c3c3;
+  --btn-tlo-neg: #000;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-weight: 300;
+  font-size: 12px;
+  background: var(--tlo-strony);
+  color: var(--font-color);
+}
+header {
+  text-transform: uppercase;
+  display: flex;
+}
+.btn {
+  text-transform: uppercase;
+  color: var(--btn-font-color);
+  text-decoration: none;
+  border: 0.2rem solid var(--btn-linia);
+  background: var(--btn-tlo);
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.btn:hover {
+  color: var(--btn-font-color-neg);
+  border: 0.2rem solid var(--btn-linia-neg);
+  background: var(--btn-tlo-neg);
+}
