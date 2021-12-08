@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +45,7 @@
       <div class="formInput">
         <div class="formInputSize">
           <div class="formLabel">
-            <label for="emai">E-mail</label>
+            <label for="email">E-mail</label>
           </div>
           <div class="formInputBox">
             <input
@@ -57,11 +57,206 @@
             />
           </div>
         </div>
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="tel">Nr telefonu kom</label>
+          </div>
+          <div class="formInputBox">
+            <input
+              type="tel"
+              id="tel"
+              name="tel_kom"
+              placeholder="Telfonu w formacie 999 888 777"
+              pattern="[0-9]{3} [0-9]{3} [0-9]{3}"
+              required
+            />
+          </div>
+        </div>
       </div>
       <div class="formInput">
         <div class="formInputSize">
+          <div class="formLabel">
+            <label for="log">Podaj Login</label>
+          </div>
+          <div class="formInputBox">
+            <input
+              type="text"
+              name="login"
+              minlength="3"
+              maxlength="12"
+              id="log"
+              value=""
+              placeholder="Wpisz login"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="formInput">
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="haslo">Podaj hasło</label>
+          </div>
+          <div class="formInputBox">
+            <input
+              type="password"
+              id="haslo"
+              name="haslo"
+              placeholder="Podaj hasło"
+              required
+            />
+          </div>
+        </div>
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="rehaslo">Powtórz hasło</label>
+          </div>
+          <div class="formInputBox">
+            <input
+              type="password"
+              id="rehaslo"
+              name="rehaslo"
+              placeholder="Powtórz hasło"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="formInput">
+        <div class="formInputSize">
+          <div class="formLabelRadio">
+            <label for="radio">Wybierz swoja stacje:</label>
+          </div>
+          <div class="formInputBoxRadio">
+            <div class="boxRadio">
+              <label for="rmf">RMF</label>
+              <input type="radio" id="rmf" name="radio_top" value="RMF" />
+            </div>
+            <div class="boxRadio">
+              <label for="eska">ESKA</label>
+              <input type="radio" id="eska" name="radio_top" value="ESKA" />
+            </div>
+            <div class="boxRadio">
+              <label for="ryja">Ma Ryja</label>
+              <input
+                type="radio"
+                id="ryja"
+                name="radio_top"
+                value="Ma Ryja"
+                checked
+              />
+            </div>
+          </div>
+        </div>
+        <div class="formInputSize">
+          <div class="formLabelCheckBox">
+            <label for="CheckBox">Wybierz piosenkę:</label>
+          </div>
+          <div class="formInputCheckBox">
+            <div class="boxCheck">
+              <label for="Mamma">BIG CYC - Mamma Mia</label>
+              <input
+                type="checkbox"
+                id="Mamma"
+                name="checkBox_top"
+                value="Mamma"
+              />
+            </div>
+            <div class="boxCheck">
+              <label for="Adelajda">ŁYDKA GRUBASA - Adelajda</label>
+              <input
+                type="checkbox"
+                id="Adelajda"
+                name="checkBox_top"
+                value="Adelajda"
+                checked
+              />
+            </div>
+            <div class="boxCheck">
+              <label for="Rapapara">ŁYDKA GRUBASA - Rapapara</label>
+              <input
+                type="checkbox"
+                id="Rapapara"
+                name="checkBox_top"
+                value="Rapapara"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="formInput">
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="admin">Uprawnienia Admin</label>
+          </div>
+          <div class="formInputBox">
+            <input list="adminList" />
+            <datalist id="adminList">
+              <option value="HeadAdmin"> </option>
+              <option value="Admin"> </option>
+            </datalist>
+          </div>
+        </div>
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="favcolor">Wybierz kolor:</label>
+          </div>
+          <div class="formInputBox">
+            <input type="color" id="favcolor" name="favcolor" />
+          </div>
+        </div>
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="birthday">Birthday:</label>
+          </div>
+          <div class="formInputBox">
+            <input type="date" id="birthday" name="birthday" />
+          </div>
+        </div>
+      </div>
+      <div class="formInput">
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="foto">Dodaj avatara</label>
+          </div>
+          <div class="formInputBox">
+            <input
+              type="file"
+              name="avatar_file"
+              id="foto"
+              value=""
+              placeholder="Dodaj avatara"
+            />
+          </div>
+        </div>
+        <div class="formInputSize">
+          <div class="formLabel">
+            <label for="plec">Płec</label>
+          </div>
+          <div class="formInputBox">
+            <input type="text" name="sex" id="plec" value="Facet" disabled />
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <span class="register_message text-danger">* pola wymagane!</span>
+      <br /><br />
+
+      <div class="formInput">
+        <div class="formInputSize">
           <div class="frmInputSubmit">
-            <input type="submit" value="Zaloguj" />
+            <input
+              type="submit"
+              name="submitRegister"
+              class="btn"
+              value="Dodaj użytkownika"
+            />
+            <input
+              type="reset"
+              name="submitReset"
+              class="btn"
+              value="Wyczyść dane"
+            />
           </div>
         </div>
       </div>
